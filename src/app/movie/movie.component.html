@@ -1,0 +1,11 @@
+<h2 id="movie_header">BEST MOVIES</h2>
+<div >
+  <a *ngFor="let movie of movies" [routerLink]="['/movies-detail', movie._id]">
+    <div id="movie_list">
+      <p id="movie_text">
+        TITLE: {{movie.title| uppercase}}
+      </p>
+    </div>
+  </a>
+    <button (click)="goToNew()">Add</button>
+</div>

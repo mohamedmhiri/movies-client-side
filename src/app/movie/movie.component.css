@@ -1,0 +1,20 @@
+h2#movie_header {
+    padding: 8px;
+    text-align: center;
+    margin-top:80px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+div#movie_list {
+    padding: 8px;
+    margin-top: 20px;
+    background-color: #A2FAA3;
+    width: 100px;
+    height: 70px;
+    border-radius: 5px;
+    color: #2C363F;
+}
+div#movie_list:hover {
+    background-color: #92C9B1;
+    color: #2F6665;
+}

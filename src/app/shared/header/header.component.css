@@ -1,0 +1,43 @@
+/*div#logo {
+    background-image: url("../../../../public/images/365cons_149.png");
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: 55px 80px;
+}*/
+img {
+    width: 30px;
+    height: 50px;
+}
+#movies_link {
+    text-align: right;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #F05D5E;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 75px;
+}
+
+li {
+    float: left;
+}
+div.link {
+    margin-top: 20px;
+}
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    color: #92C9B1;
+}

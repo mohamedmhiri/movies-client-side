@@ -1,0 +1,13 @@
+<br><br>
+<div >
+  <h2 class="model-detail-header">Create a new ACTOR</h2>
+    <div>
+      <label class="model-detail-label">name: </label>
+      <input class="model-detail-input" name="name" [(ngModel)]="actor.name" placeholder="name" />
+      <label class="model-detail-label">birth year: </label>
+      <input class="model-detail-input" name="birth_year" [(ngModel)]="actor.birth_year" placeholder="YYYY" />
+    </div>
+    <button (click)="save(actor);goToActors()">Save</button>
+    <button (click)="goBack()">Back</button> 
+</div>
+  

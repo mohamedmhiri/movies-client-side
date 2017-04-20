@@ -1,0 +1,23 @@
+h2#actor_header {
+    padding: 8px;
+    margin-top:80px;
+    text-align: center;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+div#actor_list{
+    padding: 8px;
+    margin-top: 20px;
+    background-color: #A2FAA3;
+    width: 100px;
+    height: 70px;
+    border-radius: 5px;
+    color: #2C363F;
+}
+div#actor_list:hover {
+    background-color: #92C9B1;
+    color: #2F6665;
+}
+div#actor_text {
+    top: 50%;
+}

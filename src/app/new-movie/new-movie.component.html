@@ -1,0 +1,13 @@
+<br><br>
+<div >
+  <h2 class="model-detail-header">Create a new MOVIE</h2>
+    <div>
+      <label class="model-detail-label">title: </label>
+      <input class="model-detail-input" name="title" [(ngModel)]="movie.title" placeholder="title" />
+      <label class="model-detail-label">year: </label>
+      <input class="model-detail-input" name="year" [(ngModel)]="movie.year" placeholder="YYYY" />
+    </div>
+    <button (click)="save(movie);goToMovies()">Save</button>
+    <button (click)="goBack()">Back</button> 
+</div>
+  

@@ -1,5 +1,15 @@
 <h2 id="movie_header">BEST MOVIES</h2>
 <div >
+  <h4 class="model-detail-header">Create a new MOVIE</h4>
+    <div>
+      <label class="model-detail-label">title: </label>
+      <input class="model-detail-input" name="title" [(ngModel)]="movie.title" placeholder="title" />
+      <label class="model-detail-label">year: </label>
+      <input class="model-detail-input" name="year" [(ngModel)]="movie.year" placeholder="YYYY" />
+    </div>
+    <button (click)="save(movie)">Save</button>
+</div>
+<div >
   <a *ngFor="let movie of movies" [routerLink]="['/movies-detail', movie._id]">
     <div id="movie_list">
       <p id="movie_text">

@@ -31,7 +31,7 @@ export class MovieDetailComponent implements OnInit {
     this.movieService.updateOne(movie)
      .subscribe(
        data => {
-         console.log('Success updating' + data)
+         console.log(`${ data } successfully updated`)
        }
     )
   }

@@ -39,15 +39,10 @@
 ----------------
 ## Acceptance Criteria 
 
-Given I'm at the sign up page,
-When I enter all required fields in the right way,
-Then I expect access to the client side
+**Given** I'm at the sign up page,
+**When** I enter all required fields in the right way,
+**Then I expect** access to the client side
 
-Given I'm at the sign up page,
-When I enter some unsuitable fields,
-Then I expect a sign up declined message
-
-Given I'm at the payment page,
-When I pay with a Credit Card,
-And the payment is declined
-Then I expect a payment declined message
+**Given** I'm at the sign up page,
+**When** I enter some unsuitable fields,
+**Then I expect** a sign up declined message

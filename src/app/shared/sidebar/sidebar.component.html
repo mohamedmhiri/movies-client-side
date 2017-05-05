@@ -1,0 +1,25 @@
+<div class="ui top inverted pointing fixed menu ">
+  <a class="item" (click)="menuClicked()">
+    <br><br><br><i class="sidebar icon"></i> Menu <br>
+  </a>
+</div>
+<div class="ui bottom attached segment pushable">
+  <div class="{{isClicked ? sidebarVisible: sidebarHidden }}">
+    <br><br><br><br>
+    <a class="item" [routerLink]="['/']">
+      <i class="home icon"></i> Home
+    </a>
+    <a class="item" [routerLink]="['/movies']">
+      <i class="block layout icon"></i> Movies
+    </a>
+    <a class="item" [routerLink]="['/actors']">
+      <i class="smile icon"></i> Actors
+    </a>
+  </div>
+  <!--  <div class="{{isClicked ? pusherDimmed : pusher}}">
+
+-->
+  <div class="{{pusher}}">
+    <router-outlet></router-outlet>
+  </div>
+</div>

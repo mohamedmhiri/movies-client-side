@@ -7,28 +7,34 @@ import { HttpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { MovieComponent } from './movie/movie.component';
-import { ActorComponent } from './actor/actor.component';
+
 import { APP_BASE_HREF } from '@angular/common';
 import { HeaderComponent } from './shared/header/header.component';
-import { MovieDetailComponent } from './movie-detail/movie-detail.component';
-import { ActorDetailComponent } from './actor-detail/actor-detail.component';
+
 import { ErrorComponent } from './error/error.component';
-import { NewMovieComponent } from './new-movie/new-movie.component';
-import { NewActorComponent } from './new-actor/new-actor.component';
+import { HomeComponent } from './home/home.component';
+import { SidebarComponent } from './shared/sidebar/sidebar.component';
+import { MovieComponent } from './movie/movie.component';
+import { ActorComponent } from './actor/actor.component';
+import { MovieListComponent } from './movie/movie-list/movie-list.component';
+import { MovieFormComponent } from './movie/movie-form/movie-form.component';
+import { ActorListComponent } from './actor/actor-list/actor-list.component';
+import { ActorFormComponent } from './actor/actor-form/actor-form.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    ErrorComponent,
+    HomeComponent,
+    HeaderComponent,
+    SidebarComponent,
     MovieComponent,
     ActorComponent,
-    HeaderComponent,
-    MovieDetailComponent,
-    ActorDetailComponent,
-    ErrorComponent,
-    NewMovieComponent,
-    NewActorComponent
+    MovieListComponent,
+    MovieFormComponent,
+    ActorListComponent,
+    ActorFormComponent
   ],
   imports: [
     BrowserModule,

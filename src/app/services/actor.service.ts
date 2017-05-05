@@ -1,6 +1,7 @@
 import { Actor } from './../models/actor';
 import { Injectable } from '@angular/core';
 import { Http, Headers } from '@angular/http';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import 'rxjs/add/operator/map';
 
 @Injectable()
@@ -38,6 +39,10 @@ export class ActorService {
   getOne(_id) {
     return this.http.get(`${this.url}actors/${_id}`)
     .map(res => res.json())
+  }
+  toFormGroup(actors: Actor[] ) {
+    let group: any = {};
+    return new FormGroup(group);
   }
 
 }

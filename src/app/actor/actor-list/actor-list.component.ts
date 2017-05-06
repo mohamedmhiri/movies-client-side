@@ -3,7 +3,7 @@ import { ActorService } from './../../services/actor.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-actor-list',
+  selector: 'actor-list',
   templateUrl: './actor-list.component.html',
   styleUrls: ['./actor-list.component.css'],
   providers: [ActorService]

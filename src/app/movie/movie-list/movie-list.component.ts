@@ -1,6 +1,6 @@
 import { Movie } from './../../models/movie';
 import { MovieService } from './../../services/movie.service';
-import { Component, OnInit, OnChanges} from '@angular/core';
+import { Component, OnInit, OnChanges, Output, EventEmitter} from '@angular/core';
 
 @Component({
   selector: 'movie-list',
@@ -10,6 +10,9 @@ import { Component, OnInit, OnChanges} from '@angular/core';
 })
 export class MovieListComponent implements OnInit, OnChanges {
   public  movies: Array<Movie>
+  movieToUpdate: Movie
+  @Output()
+  myClick = new EventEmitter<Movie>()
   constructor(private service: MovieService) { }
 
   ngOnInit() {
@@ -34,12 +37,28 @@ export class MovieListComponent implements OnInit, OnChanges {
     this._movies = movies
   }
   get movies(): Array<Movie> { return this._movies }*/
-  delete(i) {
+
+
+
+  delete(i, movie) {
+    movie.isDeleted = 1
+    this.movies.splice(i, 1) 
+    this
+    .service
+    .removeOne(movie)
+    .subscribe(movie => {
+
+      console.log(`${movie} deleted`)
+    })
+  }
+  onClicked() {
+    this.myClick.emit(this.movieToUpdate)
+  }
+  update(i, movie) {
     console.log(i)
+    this.movieToUpdate = movie
+    this.onClicked()
   }
 
-  update(i) {
-    console.log(i)
-  }
 
 }

@@ -23,6 +23,7 @@ export class ActorService {
 
   removeOne(actor) {
     console.log(actor);
+    actor.isDeleted = 1
     return this.http.put(`${this.url}actors/${actor._id}/delete`,
       JSON.stringify(actor),
       { headers: this.headers })

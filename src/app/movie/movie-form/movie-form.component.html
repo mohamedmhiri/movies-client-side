@@ -1,20 +1,21 @@
 <br><br><br><br>
 <div class="ui raised very padded text container segment">
   <div class="ui segment">
-    <form class="ui form">
-      <h4 class="ui dividing header">Shipping Information</h4>
+    <form class="ui form" #f="ngForm">
+      <h4 class="ui dividing header">Movie Form</h4>
       <div class="field">
-        <label>Name</label>
         <div class="two fields">
+         <label>Name</label>
           <div class="field">
-            <input type="text" name="shipping[first-name]" placeholder="First Name">
+            <input type="text" name="name" [(ngModel)]=movie.title placeholder="Movie Title">
           </div>
+          <label>Year</label>
           <div class="field">
-            <input type="text" name="shipping[last-name]" placeholder="Last Name">
+            <input type="text" name="Year" [(ngModel)]=movie.year placeholder="YYYY">
           </div>
         </div>
       </div>
-      <div class="ui button" tabindex="0">Submit Order</div>
+      <div class="ui button" (click)=add(movie) tabindex="0">{{submit}}</div>
     </form>
   </div>
 </div>

@@ -14,13 +14,13 @@
         <tbody>
           <tr *ngFor="let movie of movies; let i = index">
             <td class="collapsing">
-              <div (click)="delete(i)">
+              <div (click)="delete(i, movie)">
                 <i class="trash outline icon"></i>
               </div>
 
             </td>
             <td class="collapsing">
-              <div (click)="update(i)">
+              <div (click)="update(i, movie)">
                 <i class="edit icon"></i>
               </div>
             </td>
@@ -28,22 +28,6 @@
             <td>{{movie.year}}</td>
           </tr>
         </tbody>
-        <tfoot class="full-width">
-          <tr>
-            <th></th>
-            <th colspan="4">
-              <div class="ui right floated small primary labeled icon button">
-                <i class="user icon"></i> Add User
-              </div>
-              <div class="ui small button">
-                Approve
-              </div>
-              <div class="ui small  disabled button">
-                Approve All
-              </div>
-            </th>
-          </tr>
-        </tfoot>
       </table>
     </div>
   </div>

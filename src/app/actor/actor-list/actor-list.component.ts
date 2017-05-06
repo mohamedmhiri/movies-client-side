@@ -25,6 +25,7 @@ export class ActorListComponent implements OnInit {
   }
 
   ngOnChanges() {
+    
     this.service
     .getAll()
     .subscribe(data=> {
@@ -32,8 +33,16 @@ export class ActorListComponent implements OnInit {
       console.log(this.actors)
     })
   }
-  delete(i) {
-    console.log(i)
+  delete(i, actor) {
+    actor.isDeleted = 1
+    this.actors.splice(i, 1) 
+    this
+    .service
+    .removeOne(actor)
+    .subscribe(actor => {
+
+      console.log(`${actor} deleted`)
+    })
   }
   onClicked() {
     this.myClick.emit(this.actorToUpdate)

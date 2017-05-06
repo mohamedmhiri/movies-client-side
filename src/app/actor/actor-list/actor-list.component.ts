@@ -1,6 +1,6 @@
 import { Actor } from './../../models/actor';
 import { ActorService } from './../../services/actor.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'actor-list',
@@ -10,6 +10,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ActorListComponent implements OnInit {
   actors: Array<Actor> = []
+  actorToUpdate: Actor
+  @Output()
+  myClick = new EventEmitter<Actor>()
   constructor(private service: ActorService) { }
 
   ngOnInit() {
@@ -28,6 +31,17 @@ export class ActorListComponent implements OnInit {
       this.actors = data
       console.log(this.actors)
     })
+  }
+  delete(i) {
+    console.log(i)
+  }
+  onClicked() {
+    this.myClick.emit(this.actorToUpdate)
+  }
+  update(i, actor) {
+    console.log(i)
+    this.actorToUpdate = actor
+    this.onClicked()
   }
 
 }

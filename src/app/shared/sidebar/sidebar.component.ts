@@ -7,8 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidebarComponent implements OnInit {
   styles: string = "ui top attached demo menu"
-  sidebarVisible = 'ui left demo vertical inverted labeled icon sidebar menu slide along visible'
-  sidebarHidden = 'ui left demo vertical inverted labeled icon sidebar menu'
+  sidebarVisible = 'ui sidebar left vertical inverted sidebar labeled menu huge overlay visible'
+  sidebarHidden = 'ui sidebar left vertical inverted sidebar labeled menu huge'
   
 
   pusher: string = 'pusher'

@@ -34,5 +34,12 @@ export class MovieListComponent implements OnInit, OnChanges {
     this._movies = movies
   }
   get movies(): Array<Movie> { return this._movies }*/
+  delete(i) {
+    console.log(i)
+  }
+
+  update(i) {
+    console.log(i)
+  }
 
 }

@@ -1,3 +1,21 @@
-<p>
-  actor-form works!
-</p>
+<br><br><br><br>
+<div class="ui raised very padded text container segment">
+  <div class="ui segment">
+    <form class="ui form" #f="ngForm">
+      <h4 class="ui dividing header">Actor Form</h4>
+      <div class="field">
+        <div class="two fields">
+         <label>Name</label>
+          <div class="field">
+            <input type="text" name="name" [(ngModel)]=actor.name placeholder="Actor Name">
+          </div>
+          <label>Birth Year</label>
+          <div class="field">
+            <input type="text" name="Year" [(ngModel)]=actor.birth_year placeholder="YYYY">
+          </div>
+        </div>
+      </div>
+      <div class="ui button" tabindex="0">{{submit}}</div>
+    </form>
+  </div>
+</div>
